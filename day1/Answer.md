@@ -2,7 +2,8 @@
 
 ## 1. How Much is the current memory capacity of a canister?
 
-The current memory capacity of a canister smart contract is limited to 4GB of memory
+The current memory capacity of a canister smart contract is limited to 48GB of memory
+[Source on 18/01/2023](https://forum.dfinity.org/t/increased-canister-smart-contract-memory/6148/139)
 
 ## 2. What is the issue with the following code template
 ```
