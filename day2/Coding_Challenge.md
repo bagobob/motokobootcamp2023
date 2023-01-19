@@ -29,3 +29,44 @@ actor{
 ```
 
 ## 3. Write a function factorial that takes a natural number n and returns the factorial of n.
+```
+import Iter "mo:base/Iter";
+actor {
+  
+  public func factorial(n : Nat) : async Nat {
+    var product : Nat = 1;
+    if(n == 0){
+      return 1;
+    }else{
+      for (i in Iter.range(1, n)) {
+      product *= i;
+    };
+    return product;
+    };
+  };
+};
+```
+
+## 4. Write a function number_of_words that takes a sentence and returns the number of words in the sentence.
+```
+import Array "mo:base/Array";
+import Text "mo:base/Text";
+actor{
+  type Pattern = Text.Pattern;
+  let p : Pattern = #char(' ');
+  public func number_of_words(t: Text) : async Nat{
+    var array : [Text] = [];
+    for(element in Text.split(t, p)){
+      array := Array.append<Text>(array, [element]);
+    };
+      return array.size();
+  };
+}
+```
+
+## 5. Write a function find_duplicates that takes an array of natural numbers and returns a new array containing all duplicate numbers. The order of the elements in the returned array should be the same as the order of the first occurrence in the input array.
+```
+actor{
+  
+}
+``` 
